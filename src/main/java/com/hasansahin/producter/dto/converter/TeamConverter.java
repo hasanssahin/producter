@@ -19,6 +19,9 @@ public class TeamConverter {
 
 	public TeamResponse convertTeamToTeamResponse(Team team){
 		Player player = team.getPlayers().isEmpty() ? null : team.getPlayers().get(0);
+		if(player == null){
+			throw new RuntimeException();
+		}
 		playerConverter.convertPlayerToPlayerCreateResponse(player);
 		return new TeamResponse(team.getId(), playerConverter.convertPlayerToPlayerCreateResponse(player));
 	}
