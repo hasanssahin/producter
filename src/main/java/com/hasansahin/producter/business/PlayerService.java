@@ -10,8 +10,6 @@ import com.hasansahin.producter.exception.FullTeamException;
 import com.hasansahin.producter.repository.PlayerRepository;
 import org.springframework.stereotype.Service;
 
-import javax.swing.text.Position;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;

@@ -19,12 +19,11 @@ public class TeamService {
 		this.teamConverter = teamConverter;
 	}
 
-	public Team addPlayer(Player player){
+	public void addPlayer(Player player){
 		Team team=new Team();
 		player.setTeam(team);
 		team.addPlayer(player);
 		teamRepository.save(team);
-		return team;
 	}
 
 	public List<TeamResponse> listTeam(){
