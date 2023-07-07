@@ -20,7 +20,7 @@ public class Player {
 	private Date createdDate;
 
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "team_id",referencedColumnName = "id")
+	//@JoinColumn(name = "team_id",referencedColumnName = "id")
 	private Team team;
 
 	public Player(String name, String surname, String position) {
